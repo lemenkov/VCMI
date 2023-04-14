@@ -48,7 +48,7 @@ BuildRequires:  luajit-devel
 BuildRequires:  minizip-devel
 BuildRequires:  tbb-devel
 BuildRequires:  zlib-devel
-BuildRequires:  ffmpeg-devel
+BuildRequires:  ffmpeg-free-devel
 BuildRequires:  qt5-qtbase-devel
 
 Requires:       hicolor-icon-theme
