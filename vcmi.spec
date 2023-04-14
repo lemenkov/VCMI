@@ -118,21 +118,21 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.m
 %files
 %doc README.md AUTHORS ChangeLog
 %license license.txt AI/FuzzyLite/LICENSE.FuzzyLite
-%{_bindir}/vcmiclient
-%{_bindir}/vcmiserver
 %{_bindir}/vcmibuilder
+%{_bindir}/vcmiclient
+%{_bindir}/vcmieditor
 %{_bindir}/vcmilauncher
+%{_bindir}/vcmiserver
 %{_libdir}/%{name}/
-
 # keep this in the main package, because GNOME Software etc.
 %{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/*/apps/vcmiclient.png
+%{_datadir}/icons/hicolor/*/apps/vcmieditor.png
 %{_metainfodir}/eu.vcmi.VCMI.metainfo.xml
 
 
 %files data
 %{_datadir}/%{name}/
-
 
 
 %changelog
