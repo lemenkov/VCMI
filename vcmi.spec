@@ -50,6 +50,7 @@ BuildRequires:  tbb-devel
 BuildRequires:  zlib-devel
 BuildRequires:  ffmpeg-free-devel
 BuildRequires:  qt5-qtbase-devel
+BuildRequires:  qt5-linguist
 
 Requires:       hicolor-icon-theme
 Requires:       %{name}-data = %{version}-%{release}
