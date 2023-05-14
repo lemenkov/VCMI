@@ -82,7 +82,7 @@ tar -xf %{SOURCE1} -C AI/FuzzyLite --strip-components=1
 # mods from Source2:
 tar -xf %{SOURCE2} -C Mods --strip-components=2
 
-dos2unix README.md license.txt AUTHORS ChangeLog
+dos2unix README.md license.txt AUTHORS ChangeLog.md
 
 # Don't show GITDIR-NOTFOUND in the window title
 sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/*
