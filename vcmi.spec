@@ -8,7 +8,7 @@ URL:            https://vcmi.eu/
 
 
 Version:        1.2.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 
 # vcmi is GPLv2+, fyzzylight is GPLv3
 License:        GPLv2+ and GPLv3
@@ -23,6 +23,7 @@ Source1:        https://github.com/fuzzylite/fuzzylite/archive/%{fuzzylite_commi
 Source2:            %{name}.tar.gz
 
 Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
+Patch2:         vcmi-0002-Fix-potential-nullptr-to-reference-conversion.patch
 
 # The Koji builder gets killed here, but I don't expect people to use this there
 ExcludeArch:    ppc64le
@@ -137,6 +138,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.m
 
 
 %changelog
+* Mon May 15 2023 Peter Lemenkov <lemenkov@gmail.com> - 1.2.1-2
+- Cherry-picked patch for the rare null-dereference. See https://github.com/vcmi/vcmi/pull/2109
+
 * Sun May 14 2023 Peter Lemenkov <lemenkov@gmail.com> - 1.2.1-1
 - New upstream release
 
