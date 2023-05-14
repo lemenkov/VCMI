@@ -117,7 +117,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.m
 
 
 %files
-%doc README.md AUTHORS ChangeLog
+%doc README.md AUTHORS ChangeLog.md
 %license license.txt AI/FuzzyLite/LICENSE.FuzzyLite
 %{_bindir}/vcmibuilder
 %{_bindir}/vcmiclient
