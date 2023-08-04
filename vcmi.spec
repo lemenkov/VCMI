@@ -23,7 +23,6 @@ Source1:        https://github.com/fuzzylite/fuzzylite/archive/%{fuzzylite_commi
 Source2:            %{name}.tar.gz
 
 Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
-Patch2:         vcmi-0002-Fix-potential-nullptr-to-reference-conversion.patch
 
 # The Koji builder gets killed here, but I don't expect people to use this there
 ExcludeArch:    ppc64le
