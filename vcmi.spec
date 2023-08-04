@@ -127,6 +127,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.m
 %{_libdir}/%{name}/
 # keep this in the main package, because GNOME Software etc.
 %{_datadir}/applications/*.desktop
+%{_datadir}/icons/hicolor/scalable/apps/vcmiclient.svg
 %{_datadir}/icons/hicolor/*/apps/vcmiclient.png
 %{_datadir}/icons/hicolor/*/apps/vcmieditor.png
 %{_metainfodir}/eu.vcmi.VCMI.metainfo.xml
