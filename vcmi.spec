@@ -83,7 +83,7 @@ tar -xf %{SOURCE1} -C AI/FuzzyLite --strip-components=1
 # mods from Source2:
 tar -xf %{SOURCE2} -C Mods --strip-components=2
 
-dos2unix README.md license.txt AUTHORS ChangeLog.md
+dos2unix docs/Readme.md license.txt AUTHORS ChangeLog.md
 
 # Don't show GITDIR-NOTFOUND in the window title
 sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/*
@@ -117,7 +117,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.m
 
 
 %files
-%doc README.md AUTHORS ChangeLog.md
+%doc docs/Readme.md AUTHORS ChangeLog.md
 %license license.txt AI/FuzzyLite/LICENSE.FuzzyLite
 %{_bindir}/vcmibuilder
 %{_bindir}/vcmiclient
