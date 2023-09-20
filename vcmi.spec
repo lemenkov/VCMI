@@ -29,28 +29,28 @@ ExcludeArch:    ppc64le
 
 BuildRequires:  %{_bindir}/desktop-file-validate
 BuildRequires:  %{_bindir}/dos2unix
-BuildRequires:  cmake
-BuildRequires:  gcc-c++ >= 4.7.2
 BuildRequires:  SDL2-devel
 BuildRequires:  SDL2_image-devel
-BuildRequires:  SDL2_ttf-devel
 BuildRequires:  SDL2_mixer-devel
+BuildRequires:  SDL2_ttf-devel
 BuildRequires:  boost >= 1.51
 BuildRequires:  boost-devel >= 1.51
 BuildRequires:  boost-filesystem >= 1.51
 BuildRequires:  boost-iostreams >= 1.51
+BuildRequires:  boost-locale >= 1.51
+BuildRequires:  boost-program-options >= 1.51
 BuildRequires:  boost-system >= 1.51
 BuildRequires:  boost-thread >= 1.51
-BuildRequires:  boost-program-options >= 1.51
-BuildRequires:  boost-locale >= 1.51
+BuildRequires:  cmake
+BuildRequires:  ffmpeg-free-devel
+BuildRequires:  gcc-c++ >= 4.7.2
 BuildRequires:  libappstream-glib
 BuildRequires:  luajit-devel
 BuildRequires:  minizip-devel
+BuildRequires:  qt5-linguist
+BuildRequires:  qt5-qtbase-devel
 BuildRequires:  tbb-devel
 BuildRequires:  zlib-devel
-BuildRequires:  ffmpeg-free-devel
-BuildRequires:  qt5-qtbase-devel
-BuildRequires:  qt5-linguist
 
 Requires:       hicolor-icon-theme
 Requires:       %{name}-data = %{version}-%{release}
