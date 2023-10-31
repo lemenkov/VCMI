@@ -16,11 +16,12 @@ License:        GPLv2+ and GPLv3
 Source0:        https://github.com/vcmi/vcmi/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 Source1:        https://github.com/fuzzylite/fuzzylite/archive/%{fuzzylite_commit}/fuzzylite-%{fuzzylite_scommit}.tar.gz
 
+# TODo check if it's still necessary.
 # Enable extra resolutions
 # https://forum.vcmi.eu/t/where-is-the-mod-for-resolutions-other-than-800x600/897/5
 # https://www.dropbox.com/sh/fwor43x5xrgzx6q/AABpTFqGK7Q9almbyr3hp9jma/mods/vcmi.zip (not directly downloadable)
 # unzip  delete Maps and repack as tar.gz
-Source2:            %{name}.tar.gz
+# Source2:            %{name}.tar.gz
 
 Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
 
@@ -80,8 +81,9 @@ Data files for the VCMI project, a %{summary}.
 # fuzzyight from Source1:
 tar -xf %{SOURCE1} -C AI/FuzzyLite --strip-components=1
 
+# FIXME see FIXME above
 # mods from Source2:
-tar -xf %{SOURCE2} -C Mods --strip-components=2
+# tar -xf %{SOURCE2} -C Mods --strip-components=2
 
 dos2unix docs/Readme.md license.txt AUTHORS ChangeLog.md
 
