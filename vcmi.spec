@@ -29,7 +29,6 @@ Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
 ExcludeArch:    ppc64le
 
 BuildRequires:  %{_bindir}/desktop-file-validate
-BuildRequires:  %{_bindir}/dos2unix
 BuildRequires:  SDL2-devel
 BuildRequires:  SDL2_image-devel
 BuildRequires:  SDL2_mixer-devel
@@ -87,10 +86,8 @@ tar -xf %{SOURCE1} -C AI/FuzzyLite --strip-components=1
 # mods from Source2:
 # tar -xf %{SOURCE2} -C Mods --strip-components=2
 
-dos2unix docs/Readme.md license.txt AUTHORS ChangeLog.md
-
 # Don't show GITDIR-NOTFOUND in the window title
-sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/*
+sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/GetGitRevisionDescription.cmake
 
 %build
 # low effort fix of some cmake brokenness
@@ -121,7 +118,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.m
 
 
 %files
-%doc docs/Readme.md AUTHORS ChangeLog.md
+%doc docs/Readme.md ChangeLog.md
 %license license.txt AI/FuzzyLite/LICENSE.FuzzyLite
 %{_bindir}/vcmibuilder
 %{_bindir}/vcmiclient
