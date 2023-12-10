@@ -7,7 +7,7 @@ URL:            https://vcmi.eu/
 %global fuzzylite_version 6.0
 
 
-Version:        1.3.2
+Version:        1.4.0
 Release:	%autorelease
 
 # vcmi is GPLv2+, fyzzylight is GPLv3
@@ -43,11 +43,13 @@ BuildRequires:  boost-program-options >= 1.51
 BuildRequires:  boost-system >= 1.51
 BuildRequires:  boost-thread >= 1.51
 BuildRequires:  cmake
-BuildRequires:  ffmpeg-free-devel
 BuildRequires:  gcc-c++ >= 4.7.2
 BuildRequires:  libappstream-glib
 BuildRequires:  luajit-devel
 BuildRequires:  minizip-devel
+BuildRequires:  pkgconfig(libavcodec)
+BuildRequires:  pkgconfig(libavformat)
+BuildRequires:  pkgconfig(libavutil)
 BuildRequires:  qt5-linguist
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  tbb-devel
