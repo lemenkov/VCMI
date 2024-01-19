@@ -7,7 +7,7 @@ URL:            https://vcmi.eu/
 %global fuzzylite_version 6.0
 
 
-Version:        1.4.3
+Version:        1.4.4
 Release:	%autorelease
 
 # vcmi is GPLv2+, fyzzylight is GPLv3
