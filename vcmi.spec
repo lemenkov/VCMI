@@ -95,7 +95,9 @@ sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/GetGitRevisionDescription.c
 export CXXFLAGS="%{build_cxxflags} -I/usr/include/ffmpeg"
 
 %cmake -Wno-dev \
-  -DENABLE_TEST=0 \
+  -DENABLE_TEST=FALSE \
+  -DENABLE_INNOEXTRACT=FALSE \
+  -DENABLE_GITVERSION=FALSE \
   -UCMAKE_INSTALL_LIBDIR \
   -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \
   -DCMAKE_INSTALL_RPATH=%{_libdir}/%{name}
