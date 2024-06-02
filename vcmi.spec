@@ -16,15 +16,6 @@ License:        GPL-2.0-or-later AND GPL-3.0-only
 Source0:        https://github.com/vcmi/vcmi/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 Source1:        https://github.com/fuzzylite/fuzzylite/archive/%{fuzzylite_commit}/fuzzylite-%{fuzzylite_scommit}.tar.gz
 
-# TODo check if it's still necessary.
-# Enable extra resolutions
-# https://forum.vcmi.eu/t/where-is-the-mod-for-resolutions-other-than-800x600/897/5
-# https://www.dropbox.com/sh/fwor43x5xrgzx6q/AABpTFqGK7Q9almbyr3hp9jma/mods/vcmi.zip (not directly downloadable)
-# unzip  delete Maps and repack as tar.gz
-# Source2:            %{name}.tar.gz
-
-#Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
-
 # The Koji builder gets killed here, but I don't expect people to use this there
 ExcludeArch:    ppc64le
 
@@ -82,10 +73,6 @@ Data files for the VCMI project, a %{summary}.
 %autosetup -p1
 # fuzzyight from Source1:
 tar -xf %{SOURCE1} -C AI/FuzzyLite --strip-components=1
-
-# FIXME see FIXME above
-# mods from Source2:
-# tar -xf %{SOURCE2} -C Mods --strip-components=2
 
 # Don't show GITDIR-NOTFOUND in the window title
 sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/GetGitRevisionDescription.cmake
