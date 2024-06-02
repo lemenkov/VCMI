@@ -23,7 +23,7 @@ Source1:        https://github.com/fuzzylite/fuzzylite/archive/%{fuzzylite_commi
 # unzip  delete Maps and repack as tar.gz
 # Source2:            %{name}.tar.gz
 
-Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
+#Patch1:         vcmi-0001-Specify-FFmpeg-suffix.patch
 
 # The Koji builder gets killed here, but I don't expect people to use this there
 ExcludeArch:    ppc64le
