@@ -97,8 +97,6 @@ export CXXFLAGS="%{build_cxxflags} -I/usr/include/ffmpeg"
 desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eu.vcmi.VCMI.metainfo.xml
 
-%ldconfig_scriptlets
-
 
 %files
 %doc docs/Readme.md ChangeLog.md
