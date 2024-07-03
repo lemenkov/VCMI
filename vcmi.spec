@@ -67,9 +67,6 @@ Data files for the VCMI project, a %{summary}.
 # fuzzyight from Source1:
 tar -xf %{SOURCE1} -C AI/FuzzyLite --strip-components=1
 
-# Don't show GITDIR-NOTFOUND in the window title
-sed -i 's/GITDIR-NOTFOUND/%{version}/' cmake_modules/GetGitRevisionDescription.cmake
-
 %build
 # low effort fix of some cmake brokenness
 export CXXFLAGS="%{build_cxxflags} -I/usr/include/ffmpeg"
@@ -77,7 +74,7 @@ export CXXFLAGS="%{build_cxxflags} -I/usr/include/ffmpeg"
 %cmake -Wno-dev \
   -DENABLE_TEST=FALSE \
   -DENABLE_INNOEXTRACT=FALSE \
-  -DENABLE_GITVERSION=FALSE \
+  -DENABLE_GOLDMASTER=ON \
   -UCMAKE_INSTALL_LIBDIR \
   -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \
   -DCMAKE_INSTALL_RPATH=%{_libdir}/%{name}
